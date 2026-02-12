@@ -4,6 +4,7 @@ build/
 *.bin
 *.o
 *.obj
+*.dll
 
 # Ignore Editor settings (VS Code)
 .vscode/
@@ -11,3 +12,6 @@ build/
 # Ignore System files
 .DS_Store
 Thumbs.db
+
+# Data Files (Don't upload your test database)
+*.dat

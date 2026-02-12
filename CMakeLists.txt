@@ -13,3 +13,9 @@ add_executable(LuminaDB src/main.cpp src/HashTable.cpp)
 
 # Link the threading library to our executable
 target_link_libraries(LuminaDB PRIVATE Threads::Threads)
+
+# ... (Keep all your existing code)
+
+# --- Test Suite ---
+add_executable(run_tests tests/test_core.cpp src/HashTable.cpp)
+target_link_libraries(run_tests PRIVATE Threads::Threads)
