@@ -58,6 +58,28 @@ int main() {
 }
 ```
 
+## ✅ Verification
+
+To verify system integrity, the project includes a test suite that validates collision handling, resizing logic, and memory persistence.
+
+**Run the verification suite:**
+```bash
+./run_tests.exe
+```
+
+**Expected Output:**
+```bash
+[PASS] Basic Set/Get
+[PASS] Update Existing Key
+[PASS] Get Non-Existent Key
+[PASS] Collision Retrieval 1
+[PASS] Collision Retrieval 2
+[PASS] Collision Retrieval 3
+[PASS] Pre-Delete Check
+[PASS] Post-Delete Check
+
+[SUMMARY] All internal logic verified successfully.
+```
 ## 🧪 Performance Benchmarks
 - Concurrency: Successfully tested with 10 concurrent threads performing 10,000 mixed operations.
 
