@@ -62,3 +62,7 @@ int main() {
 - Concurrency: Successfully tested with 10 concurrent threads performing 10,000 mixed operations.
 
 - Resizing: Verified dynamic expansion from 100 to 25,000+ slots without data loss.
+
+---
+### 👨‍💻 Author
+**Bipul Das** *Architected and engineered as an advanced Systems Programming initiative, focusing on memory optimization and concurrency.*
