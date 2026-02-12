@@ -6,7 +6,7 @@
 
 - **High Performance:** Utilizes a custom Hash Map with Chaining implementation to ensure **O(1)** average time complexity for Set, Get, and Delete operations.
 - **Thread Safety:** Implements **Reader-Writer Locks (`std::shared_mutex`)** to allow unlimited concurrent readers while strictly isolating writers, preventing race conditions.
-- **Dynamic Scaling:** Features an automatic **Load Factor Monitoring** system (`α >= 0.75`) that triggers dynamic resizing (Rehashing) to maintain performance as data grows.
+- **Dynamic Scaling:** Features an automatic **Load Factor Monitoring** system ($\alpha \ge 0.75$) that triggers dynamic resizing (Rehashing) to maintain performance as data grows.
 - **Persistence:** Includes a custom **Binary Serialization** engine that snapshots memory to disk (`.bin`), allowing data recovery after system shutdown.
 - **Memory Efficient:** Manually managed heap memory using RAII principles to prevent memory leaks.
 
@@ -22,27 +22,23 @@ LuminaDB uses a **Multiple-Readers, Single-Writer** model:
 - `GET`: Acquires a **Shared Lock**. Multiple threads can read simultaneously.
 - `SET` / `REMOVE`: Acquires an **Exclusive Lock**. Blocks all other operations until completion.
 
+
 ## 💻 Installation & Build
 
-**Prerequisites:**
+### Prerequisites: ###
 - C++17 Compiler (GCC/Clang/MSVC)
 - CMake 3.10+
 
-Markdown
-## 💻 Installation & Build
-
-**Prerequisites:**
-- C++17 Compiler (GCC/Clang/MSVC)
-- CMake 3.10+
-
-**Build Instructions:**
+### Build Instructions: ###
 ```bash
 mkdir build
 cd build
 cmake ..
 cmake --build .
-⚡ Usage Example
-C++
+```
+
+## ⚡ Usage Example
+```bash
 #include "include/HashTable.h"
 
 int main() {
@@ -60,9 +56,9 @@ int main() {
 
     return 0;
 }
-🧪 Performance Benchmarks
-Concurrency: Successfully tested with 10 concurrent threads performing 10,000 mixed operations.
+```
 
-Resizing: Verified dynamic expansion from 100 to 25,000+ slots without data loss.
+## 🧪 Performance Benchmarks
+- Concurrency: Successfully tested with 10 concurrent threads performing 10,000 mixed operations.
 
-Built by Bipul Das as a Systems Programming Project.
+- Resizing: Verified dynamic expansion from 100 to 25,000+ slots without data loss.
