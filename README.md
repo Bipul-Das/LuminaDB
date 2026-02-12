@@ -1,6 +1,6 @@
 # LuminaDB - High-Performance In-Memory Key-Value Store
 
-**LuminaDB** is a lightweight, thread-safe, persistent key-value store built from scratch in C++17. It is designed to mimic the core architecture of systems like Redis, focusing on low-level memory management and high-concurrency performance.
+**LuminaDB** is a high-throughput, thread-safe key-value storage engine designed for low-latency systems. Built from the ground up in C++17, it utilizes a custom implementation of a chained hash table with dynamic resizing, ensuring amortized O(1) time complexity for all CRUD operations. Unlike standard containers, LuminaDB implements a Multiple-Readers/Single-Writer concurrency model using **std::shared_mutex**, allowing it to handle heavy concurrent read loads without blocking. The engine also features a robust binary serialization protocol, ensuring data persistence and state recovery across system restarts.
 
 ## 🚀 Core Features
 
