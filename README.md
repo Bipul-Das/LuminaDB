@@ -28,14 +28,21 @@ LuminaDB uses a **Multiple-Readers, Single-Writer** model:
 - C++17 Compiler (GCC/Clang/MSVC)
 - CMake 3.10+
 
+Markdown
+## 💻 Installation & Build
+
+**Prerequisites:**
+- C++17 Compiler (GCC/Clang/MSVC)
+- CMake 3.10+
+
 **Build Instructions:**
 ```bash
 mkdir build
 cd build
 cmake ..
 cmake --build .
-
 ⚡ Usage Example
+C++
 #include "include/HashTable.h"
 
 int main() {
@@ -53,7 +60,6 @@ int main() {
 
     return 0;
 }
-
 🧪 Performance Benchmarks
 Concurrency: Successfully tested with 10 concurrent threads performing 10,000 mixed operations.
 
